@@ -119,7 +119,7 @@ for blob in blob_list:
 
     blob_client = blob_service_client.get_blob_client(container=container_name, blob=filename)
     # Write the new file name to local txt file destination
-    text_file = open(filename, "w")#,encoding="utf-8"
+    text_file = open(filename, "w",encoding="utf-8")
     n = text_file.write(result.content)
     blob_client.upload_blob(result.content)
     text_file.close()
